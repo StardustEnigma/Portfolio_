@@ -3,7 +3,7 @@ import TextType from "../components/type";
 import Navbar from "../components/Navbar";
 import ShinyText from "../components/shiny";
 import GradientButton from "../components/GradientButton";
-
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="relative min-h-screen w-screen overflow-hidden bg-black text-white flex flex-col">
@@ -50,14 +50,10 @@ export default function Home() {
       </div>
 
       {/* Button on the right, slightly up from bottom, scrolls with page */}
-      <div className="flex justify-end px-8 pb-8">
-        <div className="mb-10">
-          <GradientButton
-            url="/projects"
-            text="View My Projects"
-            newTab={false}
-          />
-        </div>
+      <div className="fixed bottom-8 right-8 z-50">
+        <Link to="/projects">
+          <GradientButton text="Visit Projects" />
+        </Link>
       </div>
     </div>
   );

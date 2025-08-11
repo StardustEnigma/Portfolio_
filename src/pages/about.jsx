@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import GradientButton from "../components/GradientButton";
 import SplitText from "../components/split";
 import { useRef, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 // Skills list
 const skills = [
   { name: "Python", icon: "🐍" },
@@ -181,12 +181,10 @@ export default function About() {
 
       {/* Gradient Button absolutely at bottom-right on top of everything */}
       <div className="fixed bottom-8 right-8 z-50">
-        <GradientButton
-          url="/contact"
-          text="Visit Contact"
-          newTab={false}
-        />
-      </div>
+  <Link to="/contact">
+    <GradientButton text="Visit Contact" />
+  </Link>
+</div>
     </div>
   );
 }

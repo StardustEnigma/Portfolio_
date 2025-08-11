@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import TrueFocus from "../components/true";
 import GradientButton from "../components/GradientButton";
 import { useRef, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 export default function Projects() {
   const canvasRef = useRef(null);
 
@@ -65,12 +65,10 @@ export default function Projects() {
 
       {/* Button on the right, slightly up from bottom, scrolls with page */}
       <div className="flex justify-end px-8 pb-8">
-        <div className="mb-10">
-          <GradientButton
-            url="/about"
-            text="Visit About"
-            newTab={false}
-          />
+        <div className="fixed bottom-8 right-8 z-50">
+          <Link to="/about">
+            <GradientButton text="Visit About" />
+          </Link>
         </div>
       </div>
     </div>
