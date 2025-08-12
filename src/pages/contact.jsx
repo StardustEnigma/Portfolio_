@@ -108,7 +108,7 @@ export default function Contact() {
               <span className="font-semibold text-xs sm:text-sm">Email</span>
             </a>
 
-            <a href="https://twitter.com/atharvamandlexyz" target="_blank" rel="noopener noreferrer"
+            <a href="https://x.com/atharvamandle19" target="_blank" rel="noopener noreferrer"
               className="group bg-white/10 rounded-2xl px-4 py-8 flex flex-col items-center hover:scale-105 transition shadow-lg hover:shadow-blue-400/40 backdrop-blur-lg border border-white/20"
             >
               <FaTwitter className="text-3xl sm:text-4xl mb-2 text-[#38bdf8] group-hover:text-white transition" />
