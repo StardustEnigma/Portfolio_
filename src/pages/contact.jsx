@@ -115,7 +115,7 @@ export default function Contact() {
               <span className="font-semibold text-xs sm:text-sm">Twitter</span>
             </a>
 
-            <a href="https://instagram.com/atharvamandle" target="_blank" rel="noopener noreferrer"
+            <a href="https://instagram.com/stardustenigma20" target="_blank" rel="noopener noreferrer"
               className="group bg-white/10 rounded-2xl px-4 py-8 flex flex-col items-center hover:scale-105 transition shadow-lg hover:shadow-pink-500/40 backdrop-blur-lg border border-white/20"
             >
               <FaInstagram className="text-3xl sm:text-4xl mb-2 text-[#f472b6] group-hover:text-white transition" />
