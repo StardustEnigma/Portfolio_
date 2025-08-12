@@ -4,19 +4,21 @@ import Home from "./pages/home";
 import Projects from "./pages/projects";
 import About from "./pages/about";
 import Contact from "./pages/contact";
+import { inject } from "@vercel/analytics"; // ✅ import tracking
+
+inject(); // ✅ start analytics tracking
 
 export default function App() {
   return (
     <>
       <Navbar />
-     
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </>
   );
 }
