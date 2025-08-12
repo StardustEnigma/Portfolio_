@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const linkHover = {
@@ -10,6 +10,13 @@ const linkHover = {
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // ✅ Close menu automatically when route changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
+
   const links = [
     { name: "Home", url: "/" },
     { name: "Projects", url: "/projects" },
@@ -49,7 +56,7 @@ export default function Navbar() {
             select-none cursor-pointer
           "
         >
-          <Link to="/" onClick={() => setMenuOpen(false)}>ATHARVA</Link>
+          <Link to="/">ATHARVA</Link>
         </motion.div>
 
         {/* Desktop Links */}
@@ -60,11 +67,7 @@ export default function Navbar() {
               {...linkHover}
               className="relative pb-1 group cursor-pointer"
             >
-              <Link
-                to={link.url}
-                onClick={() => setMenuOpen(false)}
-                className="text-white"
-              >
+              <Link to={link.url} className="text-white">
                 {link.name}
               </Link>
               <span
@@ -131,7 +134,6 @@ export default function Navbar() {
               <motion.div key={i} {...linkHover} className="w-full">
                 <Link
                   to={link.url}
-                  onClick={() => setMenuOpen(false)}
                   className="text-white text-lg font-bold w-full text-center py-2 rounded-xl hover:bg-cyan-500/20 transition block"
                 >
                   {link.name}
