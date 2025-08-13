@@ -86,7 +86,7 @@ export default function Contact() {
         
           {/* Contact Links Grid */}
           <div className="z-10 w-full max-w-lg grid grid-cols-2 sm:grid-cols-3 gap-5 mb-10">
-            <a href="https://github.com/AtharvaMandle" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/StardustEnigma" target="_blank" rel="noopener noreferrer"
               className="group bg-white/10 rounded-2xl px-4 py-8 flex flex-col items-center hover:scale-105 transition shadow-lg hover:shadow-cyan-300/40 backdrop-blur-lg border border-white/20"
             >
               <FaGithub className="text-3xl sm:text-4xl mb-2 text-[#38bdf8] group-hover:text-white transition" />
